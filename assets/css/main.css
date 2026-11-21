@@ -77,7 +77,12 @@ input, select { font-family: inherit; font-size: 16px; }
   margin-inline: auto;
 }
 
-.section { padding-block: clamp(72px, 9vw, 128px); }
+.section { padding-block: clamp(56px, 7vw, 96px); }
+/* Hero entrance initial states (only when JS is present; the hero script
+   animates these to visible, and removes .js if GSAP is unavailable). */
+.js .hero-title .word { transform: translateY(115%); }
+.js .hero-kicker, .js .hero-copy, .js .hero-ctas, .js .hero-meta { opacity: 0; transform: translateY(24px); }
+.js .hero-frame, .js .hero-caption { opacity: 0; transform: translateY(32px); }
 
 .eyebrow {
   display: flex;

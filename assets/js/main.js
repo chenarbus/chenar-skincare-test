@@ -263,13 +263,13 @@
 
     document.querySelectorAll("[data-reveal]").forEach(function (el) {
       var kind = el.getAttribute("data-reveal") || "up";
-      var vars = { opacity: 0, duration: 0.7, ease: "power3.out" };
-      if (kind === "up") vars.y = 28;
+      var vars = { opacity: 0, duration: 0.6, ease: "power3.out" };
+      if (kind === "up") vars.y = 20;
       if (kind === "left") vars.x = -32;
       if (kind === "right") vars.x = 32;
       if (kind === "scale") vars.scale = 0.96;
       gsap.from(el, Object.assign(vars, {
-        scrollTrigger: { trigger: el, start: "top 88%", once: true }
+        scrollTrigger: { trigger: el, start: "top 92%", once: true }
       }));
     });
 

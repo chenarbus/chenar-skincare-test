@@ -95,6 +95,7 @@ function updateCount() {
   const visible = [...grid.children].filter(card => card.style.display !== 'none');
   count.textContent = `Showing ${visible.length} product${visible.length === 1 ? '' : 's'}`;
 }
+updateCount();
 chips.forEach(chip => {
   chip.addEventListener('click', () => {
     chips.forEach(c => c.setAttribute('aria-pressed', 'false'));
