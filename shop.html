@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shop — AURELLE</title>
+<meta name="description" content="Shop AURELLE small-batch botanical skincare: serums, creams and cleansing oils. Demo concept, not a real store.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+<header class="site-header" id="siteHeader"><div class="container header-inner">
+<a class="wordmark" href="index.html" aria-label="Aurelle home">AURELLE<span class="wordmark-dot">.</span></a>
+<nav class="site-nav" id="siteNav" aria-label="Primary">
+<a href="shop.html" aria-current="page">Shop</a><a href="ingredients.html">Ingredients</a><a href="ritual.html">Ritual</a><a href="index.html#journal">Journal</a>
+</nav>
+<div class="header-actions">
+<button class="bag-btn" id="bagBtn" aria-label="Open shopping bag" aria-haspopup="dialog">Bag <span class="bag-count" id="bagCount">0</span></button>
+<button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="siteNav"><span></span><span></span><span></span></button>
+</div></div></header>
+<main>
+<section class="page-hero"><div class="container">
+<p class="eyebrow">01 — The Shop</p>
+<h1>Everything your skin needs. <em>Nothing it doesn't.</em></h1>
+<p class="section-lede">Four formulas, each one made in small batches and built around ingredients we name on the label. No hidden fragrance, no filler.</p>
+</div></section>
+<div class="container">
+<div class="shop-tools">
+<div class="chips" role="group" aria-label="Filter products">
+<button class="chip" type="button" data-filter="all" aria-pressed="true">All</button>
+<button class="chip" type="button" data-filter="serum" aria-pressed="false">Serums</button>
+<button class="chip" type="button" data-filter="cream" aria-pressed="false">Creams</button>
+<button class="chip" type="button" data-filter="cleanser" aria-pressed="false">Cleansers</button>
+</div>
+<div class="sort-wrap"><label for="sortSelect">Sort</label><select id="sortSelect"><option value="featured">Featured</option><option value="price-asc">Price: low to high</option><option value="price-desc">Price: high to low</option></select></div>
+</div>
+<p class="shop-count" id="shopCount">Showing 4 products</p>
+<div class="product-grid shop-grid" id="productGrid">
+<article class="product-card" data-category="serum" data-price="148" data-name="Lumière Renewal Serum" data-featured="1" data-reveal="up">
+<div class="product-media"><img src="images/media-generation-aurelle-hero-serum-0-4fcf1c53-7531-4a49-99a8-deaffc6c5359.jpg" alt="Amber glass bottle of Lumière Renewal Serum on a stone surface"><span class="product-tag">Best seller</span></div>
+<div class="product-body"><h3 class="product-name"><a href="#serum">Lumière Renewal Serum</a></h3><p class="product-meta">30 ml · Face serum</p><p class="product-keys">Rosehip · Squalane · Niacinamide</p><div class="product-foot"><span class="product-price">$148</span><button class="btn btn-small" data-add-to-bag="serum">Add to bag</button></div></div>
+</article>
+<article class="product-card" data-category="cream" data-price="128" data-name="Crème Velours" data-featured="2" data-reveal="up">
+<div class="product-media"><img src="images/media-generation-aurelle-cream-jar-0-c90256d9-1f0b-487e-a089-5493aa65174f.jpg" alt="Glass jar of Crème Velours with a cream lid"><span class="product-tag">New</span></div>
+<div class="product-body"><h3 class="product-name"><a href="#cream">Crème Velours</a></h3><p class="product-meta">50 ml · Face cream</p><p class="product-keys">Shea butter · Squalane · Hyaluronic acid</p><div class="product-foot"><span class="product-price">$128</span><button class="btn btn-small" data-add-to-bag="cream">Add to bag</button></div></div>
+</article>
+<article class="product-card" data-category="serum" data-price="98" data-name="Éclat Eye Concentrate" data-featured="3" data-reveal="up">
+<div class="product-media"><img src="images/media-generation-aurelle-cream-texture-0-ec41ca31-18d6-4d5b-9123-76716369dccd.jpg" alt="Whipped cream texture of Éclat Eye Concentrate in soft light"><span class="product-tag">Treatment</span></div>
+<div class="product-body"><h3 class="product-name"><a href="#eye">Éclat Eye Concentrate</a></h3><p class="product-meta">15 ml · Eye treatment</p><p class="product-keys">Niacinamide · Hyaluronic acid · Green tea</p><div class="product-foot"><span class="product-price">$98</span><button class="btn btn-small" data-add-to-bag="eye">Add to bag</button></div></div>
+</article>
+<article class="product-card" data-category="cleanser" data-price="86" data-name="Huile Nettoyante Cleansing Oil" data-featured="4" data-reveal="up">
+<div class="product-media"><img src="images/media-generation-aurelle-cleansing-oil-0-750a71ce-3fb7-4a8a-93a7-de9e7b2a9779.jpg" alt="Bottle of Huile Nettoyante cleansing oil beside green leaves"></div>
+<div class="product-body"><h3 class="product-name"><a href="#oil">Huile Nettoyante Cleansing Oil</a></h3><p class="product-meta">150 ml · Cleansing oil</p><p class="product-keys">Squalane · Green tea</p><div class="product-foot"><span class="product-price">$86</span><button class="btn btn-small" data-add-to-bag="oil">Add to bag</button></div></div>
+</article>
+</div>
+</div>
+<div class="container">
+<section class="product-detail" id="serum">
+<div class="detail-media"><img src="images/media-generation-aurelle-hero-serum-0-4fcf1c53-7531-4a49-99a8-deaffc6c5359.jpg" alt="Amber glass bottle of Lumière Renewal Serum on a stone surface"></div>
+<div class="detail-body"><h2>Lumière Renewal Serum</h2><p class="detail-price">$148 · 30 ml</p><p>A lightweight daily serum built around cold-pressed rosehip oil. It sinks in fast and leaves skin looking even and rested.</p><p>The oil base absorbs quickly, so it layers under cream without pilling. Every ingredient is named on the label, and there is no added fragrance.</p><ul class="detail-list"><li><strong>Size</strong><span>30 ml</span></li><li><strong>Key ingredients</strong><span>Rosehip · Squalane · Niacinamide</span></li><li><strong>How to use</strong><span>Press 3–4 drops onto damp skin, morning and evening, after cleansing.</span></li><li><strong>Skin goals</strong><span>Uneven tone · Dullness · Early lines</span></li></ul><div class="detail-actions"><button class="btn btn-terra" data-add-to-bag="serum">Add to bag — $148</button><a class="btn btn-outline" href="ritual.html">Read the ritual</a></div></div>
+</section>
+<section class="product-detail" id="cream">
+<div class="detail-media"><img src="images/media-generation-aurelle-cream-jar-0-c90256d9-1f0b-487e-a089-5493aa65174f.jpg" alt="Glass jar of Crème Velours with a cream lid"></div>
+<div class="detail-body"><h2>Crème Velours</h2><p class="detail-price">$128 · 50 ml</p><p>A whipped, cushiony cream that seals in moisture without sitting heavy. Shea butter does the softening; squalane and hyaluronic acid hold the water in.</p><p>The whipped texture spreads easily and absorbs without leaving a heavy residue. Every ingredient is named on the label, and there is no added fragrance.</p><ul class="detail-list"><li><strong>Size</strong><span>50 ml</span></li><li><strong>Key ingredients</strong><span>Shea butter · Squalane · Hyaluronic acid</span></li><li><strong>How to use</strong><span>Warm a pea-sized amount between your palms and press over face and neck, morning and evening.</span></li><li><strong>Skin goals</strong><span>Dryness · Tightness · Comfort</span></li></ul><div class="detail-actions"><button class="btn btn-terra" data-add-to-bag="cream">Add to bag — $128</button><a class="btn btn-outline" href="ritual.html">Read the ritual</a></div></div>
+</section>
+<section class="product-detail" id="eye">
+<div class="detail-media"><img src="images/media-generation-aurelle-cream-texture-0-ec41ca31-18d6-4d5b-9123-76716369dccd.jpg" alt="Whipped cream texture of Éclat Eye Concentrate in soft light"></div>
+<div class="detail-body"><h2>Éclat Eye Concentrate</h2><p class="detail-price">$98 · 15 ml</p><p>A light concentrate for the eye area, with niacinamide and hyaluronic acid. It hydrates and softens the look of fine lines without fragrance or sting.</p><p>The lightweight texture absorbs quickly and layers under cream without pilling. Every ingredient is named on the label, and there is no added fragrance.</p><ul class="detail-list"><li><strong>Size</strong><span>15 ml</span></li><li><strong>Key ingredients</strong><span>Niacinamide · Hyaluronic acid · Green tea</span></li><li><strong>How to use</strong><span>Tap one pump around the orbital bone, morning and evening. A little goes a long way.</span></li><li><strong>Skin goals</strong><span>Dark circles · Fine lines · Puffiness</span></li></ul><div class="detail-actions"><button class="btn btn-terra" data-add-to-bag="eye">Add to bag — $98</button><a class="btn btn-outline" href="ritual.html">Read the ritual</a></div></div>
+</section>
+<section class="product-detail" id="oil">
+<div class="detail-media"><img src="images/media-generation-aurelle-cleansing-oil-0-750a71ce-3fb7-4a8a-93a7-de9e7b2a9779.jpg" alt="Bottle of Huile Nettoyante cleansing oil beside green leaves"></div>
+<div class="detail-body"><h2>Huile Nettoyante Cleansing Oil</h2><p class="detail-price">$86 · 150 ml</p><p>A gentle cleansing oil that dissolves sunscreen, makeup and the day without stripping the skin. It rinses clean and leaves no film.</p><p>The oil turns milky on contact with water and rinses away with warm water. Every ingredient is named on the label, and there is no added fragrance.</p><ul class="detail-list"><li><strong>Size</strong><span>150 ml</span></li><li><strong>Key ingredients</strong><span>Squalane · Green tea</span></li><li><strong>How to use</strong><span>Massage onto dry skin for 60 seconds, add a little water to turn it milky, then rinse.</span></li><li><strong>Skin goals</strong><span>Daily cleansing · Sensitive skin · Makeup removal</span></li></ul><div class="detail-actions"><button class="btn btn-terra" data-add-to-bag="oil">Add to bag — $86</button><a class="btn btn-outline" href="ritual.html">Read the ritual</a></div></div>
+</section>
+</div>
+</main>
+<footer class="site-footer"><div class="container footer-grid">
+<div class="footer-brand"><p class="wordmark">AURELLE<span class="wordmark-dot">.</span></p><p>Skin, distilled to its essence. Small-batch botanical skincare, made with ingredients you can read.</p></div>
+<nav aria-label="Footer shop"><p class="footer-title">Shop</p><a href="shop.html">All products</a><a href="shop.html#serum">Lumière Renewal Serum</a><a href="shop.html#cream">Crème Velours</a><a href="shop.html#oil">Huile Nettoyante Cleansing Oil</a><a href="shop.html#eye">Éclat Eye Concentrate</a></nav>
+<nav aria-label="Footer learn"><p class="footer-title">Learn</p><a href="ingredients.html">Ingredients</a><a href="ritual.html">Ritual</a><a href="index.html#journal">Journal</a></nav>
+<div class="footer-note"><p class="footer-title">A note</p><p>Demo concept — not a real store. Built by Chenar as a design test.</p></div>
+</div><div class="container footer-bottom"><p>© AURELLE — a fictional brand created for design testing.</p><p>Demo concept — not a real store. Built by Chenar as a design test.</p></div></footer>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.15.1/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.15.1/dist/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.3.27/dist/lenis.min.js"></script>
+<script src="assets/js/main.js"></script>
+<script>
+const grid = document.getElementById('productGrid');
+const count = document.getElementById('shopCount');
+const chips = document.querySelectorAll('.chip');
+const sortSelect = document.getElementById('sortSelect');
+function updateCount() {
+  const visible = [...grid.children].filter(card => card.style.display !== 'none');
+  count.textContent = `Showing ${visible.length} product${visible.length === 1 ? '' : 's'}`;
+}
+chips.forEach(chip => {
+  chip.addEventListener('click', () => {
+    chips.forEach(c => c.setAttribute('aria-pressed', 'false'));
+    chip.setAttribute('aria-pressed', 'true');
+    const filter = chip.dataset.filter;
+    [...grid.children].forEach(card => {
+      card.style.display = filter === 'all' || card.dataset.category === filter ? '' : 'none';
+    });
+    updateCount();
+  });
+});
+sortSelect.addEventListener('change', () => {
+  const cards = [...grid.children];
+  const value = sortSelect.value;
+  cards.sort((a, b) => value === 'price-asc' ? a.dataset.price - b.dataset.price : value === 'price-desc' ? b.dataset.price - a.dataset.price : a.dataset.featured - b.dataset.featured);
+  cards.forEach(card => grid.appendChild(card));
+});
+</script>
+</body>
+</html>

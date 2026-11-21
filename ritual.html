@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Ritual — AURELLE</title>
+<meta name="description" content="The AURELLE ritual: cleanse, treat, seal in three minutes, twice a day. Build your ritual by skin goal. Demo concept, not a real store.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+<header class="site-header" id="siteHeader"><div class="container header-inner">
+<a class="wordmark" href="index.html" aria-label="Aurelle home">AURELLE<span class="wordmark-dot">.</span></a>
+<nav class="site-nav" id="siteNav" aria-label="Primary">
+<a href="shop.html">Shop</a><a href="ingredients.html">Ingredients</a><a href="ritual.html" aria-current="page">Ritual</a><a href="index.html#journal">Journal</a>
+</nav>
+<div class="header-actions">
+<button class="bag-btn" id="bagBtn" aria-label="Open shopping bag" aria-haspopup="dialog">Bag <span class="bag-count" id="bagCount">0</span></button>
+<button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="siteNav"><span></span><span></span><span></span></button>
+</div></div></header>
+<main>
+<section class="page-hero"><div class="container">
+<p class="eyebrow"><span class="num">01</span> The Ritual</p>
+<h1>Three minutes, <em>twice a day.</em></h1>
+<p class="section-lede">No ten-step routines. No gadgets. Three steps, in the same order, every morning and every night — that is the whole ritual.</p>
+</div></section>
+<div class="container ritual-sticky">
+<section class="ritual-step">
+<div class="step-media"><img src="images/media-generation-aurelle-cleansing-oil-0-750a71ce-3fb7-4a8a-93a7-de9e7b2a9779.jpg" alt="Bottle of Huile Nettoyante cleansing oil beside green leaves" data-parallax></div>
+<div class="step-body" data-reveal="up">
+<p class="step-num">01</p>
+<h2>Cleanse</h2>
+<p class="step-time">60 seconds · Huile Nettoyante</p>
+<p>Start with dry skin and dry hands. The oil dissolves sunscreen, makeup and the day itself — no foam, no tight feeling after.</p>
+<div class="step-how"><strong>Technique</strong><p>Massage a full pump over your face for 60 seconds. Add a splash of water until it turns milky, then rinse with lukewarm water. Pat dry, never rub.</p></div>
+</div>
+</section>
+<section class="ritual-step">
+<div class="step-media"><img src="images/media-generation-aurelle-hero-serum-0-4fcf1c53-7531-4a49-99a8-deaffc6c5359.jpg" alt="Amber glass bottle of Lumière Renewal Serum on a stone surface" data-parallax></div>
+<div class="step-body" data-reveal="up">
+<p class="step-num">02</p>
+<h2>Treat</h2>
+<p class="step-time">60 seconds · Lumière Renewal Serum + Éclat</p>
+<p>Serum goes on damp skin, while it can still drink. Three to four drops of Lumière, pressed in — then one pump of Éclat around the eyes.</p>
+<div class="step-how"><strong>Technique</strong><p>Warm the serum between your palms. Press, don't rub, over face and neck. Wait one minute before the next step so it can settle.</p></div>
+</div>
+</section>
+<section class="ritual-step">
+<div class="step-media"><img src="images/media-generation-aurelle-ritual-hands-0-bb69b49b-4b8a-47a8-a685-a8f74203dc7a.jpg" alt="Hands pressing serum into skin during the morning ritual" data-parallax></div>
+<div class="step-body" data-reveal="up">
+<p class="step-num">03</p>
+<h2>Seal</h2>
+<p class="step-time">60 seconds · Crème Velours</p>
+<p>Cream is the lid on the jar. Crème Velours locks the water and the serum in, so the work of the first two steps lasts until morning — or until night.</p>
+<div class="step-how"><strong>Technique</strong><p>Warm a pea-sized amount between your palms and press it over face and neck. In the morning, sunscreen goes on after this step, never before.</p></div>
+</div>
+</section>
+</div>
+<section class="section"><div class="container">
+<div class="goal-picker" data-reveal="up">
+<p class="eyebrow"><span class="num">02</span> Build your ritual</p>
+<h2 class="section-title" style="font-size: clamp(30px, 3vw, 44px);">Start with your skin goal.</h2>
+<p class="section-lede">Pick one goal. We will highlight the formulas that serve it — the rest of the ritual stays the same.</p>
+<div class="goal-buttons" role="group" aria-label="Skin goals">
+<button class="goal-btn" data-goal="hydration" aria-pressed="true">Hydration</button>
+<button class="goal-btn" data-goal="radiance" aria-pressed="false">Radiance</button>
+<button class="goal-btn" data-goal="calm" aria-pressed="false">Calm</button>
+</div>
+<p class="goal-note" id="goalNote">Hydration first: water in, then a seal. Lumière and Éclat draw water into the skin; Crème Velours keeps it there.</p>
+<div class="goal-products" id="goalProducts">
+<article class="product-card is-highlight" data-goals="hydration radiance calm">
+<div class="product-media"><img src="images/media-generation-aurelle-hero-serum-0-4fcf1c53-7531-4a49-99a8-deaffc6c5359.jpg" alt="Amber glass bottle of Lumière Renewal Serum on a stone surface"><span class="product-tag">Serum</span></div>
+<div class="product-body">
+<h3 class="product-name"><a href="shop.html#serum">Lumière Renewal Serum</a></h3>
+<p class="product-meta">30 ml</p>
+<p class="product-keys">Rosehip · Squalane · Niacinamide</p>
+<div class="product-foot"><p class="product-price">$148</p><button class="btn btn-small btn-terra" type="button" data-add-to-bag="serum">Add to bag</button></div>
+</div>
+</article>
+<article class="product-card is-highlight" data-goals="hydration calm">
+<div class="product-media"><img src="images/media-generation-aurelle-cream-jar-0-c90256d9-1f0b-487e-a089-5493aa65174f.jpg" alt="Glass jar of Crème Velours with a cream lid"><span class="product-tag">Cream</span></div>
+<div class="product-body">
+<h3 class="product-name"><a href="shop.html#cream">Crème Velours</a></h3>
+<p class="product-meta">50 ml</p>
+<p class="product-keys">Shea butter · Squalane · Hyaluronic acid</p>
+<div class="product-foot"><p class="product-price">$128</p><button class="btn btn-small btn-terra" type="button" data-add-to-bag="cream">Add to bag</button></div>
+</div>
+</article>
+<article class="product-card is-dimmed" data-goals="radiance calm">
+<div class="product-media"><img src="images/media-generation-aurelle-cleansing-oil-0-750a71ce-3fb7-4a8a-93a7-de9e7b2a9779.jpg" alt="Bottle of Huile Nettoyante cleansing oil beside green leaves"><span class="product-tag">Cleansing oil</span></div>
+<div class="product-body">
+<h3 class="product-name"><a href="shop.html#oil">Huile Nettoyante Cleansing Oil</a></h3>
+<p class="product-meta">150 ml</p>
+<p class="product-keys">Squalane · Green tea</p>
+<div class="product-foot"><p class="product-price">$86</p><button class="btn btn-small btn-terra" type="button" data-add-to-bag="oil">Add to bag</button></div>
+</div>
+</article>
+<article class="product-card is-highlight" data-goals="hydration radiance">
+<div class="product-media"><img src="images/media-generation-aurelle-cream-texture-0-ec41ca31-18d6-4d5b-9123-76716369dccd.jpg" alt="Whipped cream texture of Éclat Eye Concentrate in soft light"><span class="product-tag">Eye concentrate</span></div>
+<div class="product-body">
+<h3 class="product-name"><a href="shop.html#eye">Éclat Eye Concentrate</a></h3>
+<p class="product-meta">15 ml</p>
+<p class="product-keys">Niacinamide · Hyaluronic acid · Green tea</p>
+<div class="product-foot"><p class="product-price">$98</p><button class="btn btn-small btn-terra" type="button" data-add-to-bag="eye">Add to bag</button></div>
+</div>
+</article>
+</div>
+</div>
+</div></section>
+<section class="section" id="journal"><div class="container">
+<p class="eyebrow"><span class="num">03</span> Journal</p>
+<h2 class="section-title">Read before you <em>buy more.</em></h2>
+<div class="journal-grid three">
+<details class="journal-card" data-reveal="up">
+<summary><span class="j-kicker">Guide</span><h3>How to layer a serum so it actually absorbs</h3><span class="j-link">Read the guide</span></summary>
+<p>Serum works best on damp skin. After cleansing, leave your face slightly wet — water on the surface helps humectants like hyaluronic acid pull moisture in instead of sitting on top.</p>
+<p>Press, don't rub. Rubbing pushes product onto your hands; pressing puts it on your face. Give each layer a minute before the next one, and use less than you think — three to four drops covers a whole face.</p>
+</details>
+<details class="journal-card" data-reveal="up">
+<summary><span class="j-kicker">Ingredients</span><h3>What niacinamide does, in plain language</h3><span class="j-link">Read the guide</span></summary>
+<p>Niacinamide is vitamin B3. It supports the skin barrier — the wall that keeps water in and irritants out — and it helps tone look more even over weeks, not overnight.</p>
+<p>It plays well with almost everything, including vitamin C and retinol, and most skin types tolerate it daily. If a product lists it near the top of the ingredients, that is a good sign it is there to work, not to decorate the label.</p>
+</details>
+<details class="journal-card" data-reveal="up">
+<summary><span class="j-kicker">Ritual</span><h3>A slower morning: building a three-minute ritual that sticks</h3><span class="j-link">Read the guide</span></summary>
+<p>A ritual fails when it asks for more time than your morning has. Three minutes, three steps, same order every day — that is a routine your hands can learn by heart.</p>
+<p>Anchor it to something you already do: cleanse after you brush your teeth, serum while the kettle boils. When the steps have a place in your morning, you stop deciding and start doing.</p>
+</details>
+</div>
+</div></section>
+</main>
+<footer class="site-footer"><div class="container footer-grid">
+<div class="footer-brand"><p class="wordmark">AURELLE<span class="wordmark-dot">.</span></p><p>Skin, distilled to its essence. Small-batch botanical skincare, made with ingredients you can read.</p></div>
+<nav aria-label="Footer shop"><p class="footer-title">Shop</p><a href="shop.html">All products</a><a href="shop.html#serum">Lumière Renewal Serum</a><a href="shop.html#cream">Crème Velours</a><a href="shop.html#oil">Huile Nettoyante Cleansing Oil</a><a href="shop.html#eye">Éclat Eye Concentrate</a></nav>
+<nav aria-label="Footer learn"><p class="footer-title">Learn</p><a href="ingredients.html">Ingredients</a><a href="ritual.html">Ritual</a><a href="index.html#journal">Journal</a></nav>
+<div class="footer-note"><p class="footer-title">A note</p><p>Demo concept — not a real store. Built by Chenar as a design test.</p></div>
+</div><div class="container footer-bottom"><p>© AURELLE — a fictional brand created for design testing.</p><p>Demo concept — not a real store. Built by Chenar as a design test.</p></div></footer>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.15.1/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.15.1/dist/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.3.27/dist/lenis.min.js"></script>
+<script src="assets/js/main.js"></script>
+<script>
+(function () {
+  var notes = {
+    hydration: "Hydration first: water in, then a seal. Lumière and Éclat draw water into the skin; Crème Velours keeps it there.",
+    radiance: "Radiance is even tone plus light. Lumière evens tone, Éclat brightens the eye area, and the cleansing oil starts each day with a clean slate.",
+    calm: "Calm means fewer ingredients and no fragrance. The cleansing oil, the serum and the cream are all fragrance-free and built to be gentle."
+  };
+  var note = document.getElementById("goalNote");
+  var buttons = document.querySelectorAll(".goal-btn");
+  var cards = document.querySelectorAll("#goalProducts .product-card");
+  buttons.forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      var goal = btn.getAttribute("data-goal");
+      buttons.forEach(function (b) { b.setAttribute("aria-pressed", b === btn ? "true" : "false"); });
+      if (note) note.textContent = notes[goal];
+      cards.forEach(function (card) {
+        var match = (card.getAttribute("data-goals") || "").split(" ").indexOf(goal) !== -1;
+        card.classList.toggle("is-highlight", match);
+        card.classList.toggle("is-dimmed", !match);
+      });
+    });
+  });
+})();
+</script>
+</body>
+</html>

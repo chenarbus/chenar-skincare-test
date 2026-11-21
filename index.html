@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AURELLE — Skin, distilled to its essence.</title>
+<meta name="description" content="AURELLE is a fictional luxury botanical skincare brand: small-batch serums, creams and cleansing oils with six named ingredients. Demo concept, not a real store.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="stylesheet" href="assets/css/main.css">
+<script type="importmap">
+{
+  "imports": {
+    "three": "https://cdn.jsdelivr.net/npm/three@0.187.0/build/three.module.js",
+    "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.187.0/examples/jsm/"
+  }
+}
+</script>
+</head>
+<body>
+
+<header class="site-header" id="siteHeader"><div class="container header-inner">
+<a class="wordmark" href="index.html" aria-label="Aurelle home">AURELLE<span class="wordmark-dot">.</span></a>
+<nav class="site-nav" id="siteNav" aria-label="Primary">
+<a href="shop.html">Shop</a><a href="ingredients.html">Ingredients</a><a href="ritual.html">Ritual</a><a href="index.html#journal">Journal</a>
+</nav>
+<div class="header-actions">
+<button class="bag-btn" id="bagBtn" aria-label="Open shopping bag" aria-haspopup="dialog">Bag <span class="bag-count" id="bagCount">0</span></button>
+<button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="siteNav"><span></span><span></span><span></span></button>
+</div></div></header>
+
+<main>
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="container hero-grid">
+    <div class="hero-copy-col">
+      <p class="eyebrow hero-kicker"><span class="num">01</span> The Apothecary Editorial</p>
+      <h1 class="hero-title">
+        <span class="line"><span class="word">Skin,</span></span>
+        <span class="line"><span class="word"><em>distilled</em></span> <span class="word">to</span></span>
+        <span class="line"><span class="word">its</span> <span class="word">essence.</span></span>
+      </h1>
+      <p class="hero-copy">Small-batch botanical skincare, made in limited runs and built around six ingredients we name on the label. No hidden fragrance. No filler. Just skin, distilled to its essence.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-terra" href="shop.html">Shop the formulas</a>
+        <a class="btn btn-outline" href="ritual.html">Read the ritual</a>
+      </div>
+      <div class="hero-meta">
+        <span><strong>Small-batch</strong> · numbered runs</span>
+        <span><strong>6</strong> named ingredients</span>
+        <span><strong>Fragrance-free</strong> · always</span>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="drop-stage" id="dropStage" aria-hidden="true"></div>
+      <div class="hero-frame">
+        <img src="images/media-generation-aurelle-hero-serum-0-4fcf1c53-7531-4a49-99a8-deaffc6c5359.jpg" alt="Amber glass bottle of Lumière Renewal Serum on a stone surface" fetchpriority="high">
+      </div>
+      <div class="hero-caption">
+        <span><strong>Lumière Renewal Serum</strong> — 30 ml</span>
+        <span>$148</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TICKER ============ -->
+<div class="ticker" aria-hidden="true">
+  <div class="ticker-track">
+    <span>Rosehip oil</span><span>Squalane</span><span>Niacinamide</span><span>Hyaluronic acid</span><span>Green tea</span><span>Shea butter</span><span>Cold-pressed</span><span>Small-batch</span><span>Fragrance-free</span>
+    <span>Rosehip oil</span><span>Squalane</span><span>Niacinamide</span><span>Hyaluronic acid</span><span>Green tea</span><span>Shea butter</span><span>Cold-pressed</span><span>Small-batch</span><span>Fragrance-free</span>
+  </div>
+</div>
+
+<!-- ============ MANIFESTO ============ -->
+<section class="section manifesto">
+  <div class="container manifesto-grid">
+    <div data-reveal="up">
+      <p class="eyebrow"><span class="num">01</span> Manifesto</p>
+      <p class="manifesto-statement">We make less, <em>on purpose.</em> Four formulas. Six ingredients. Nothing hidden.</p>
+    </div>
+    <div class="manifesto-body" data-reveal="up">
+      <p>Most skincare asks you to trust a label you cannot read. AURELLE does the opposite: every formula is built around a short list of ingredients, each one named, each one doing a job.</p>
+      <p>We make in small batches because plant oils are living things — cold-pressed, volatile, and best used fresh. When a harvest is short, the batch is short. We do not top it up with substitutes, and we do not stretch a good formula into ten mediocre ones.</p>
+      <ul class="manifesto-list">
+        <li><span class="m-num">i.</span><span><strong>Small batches, numbered by run.</strong> When a batch sells out, it sells out.</span></li>
+        <li><span class="m-num">ii.</span><span><strong>Every ingredient named on the label.</strong> If you cannot pronounce it, you can look it up on the ingredients page.</span></li>
+        <li><span class="m-num">iii.</span><span><strong>No fragrance, ever.</strong> What you smell is the plant oils themselves.</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PRODUCTS PREVIEW ============ -->
+<section class="section">
+  <div class="container">
+    <div class="products-head" data-reveal="up">
+      <div>
+        <p class="eyebrow"><span class="num">02</span> The collection</p>
+        <h2 class="section-title">Four formulas. <em>One ritual.</em></h2>
+        <p class="section-lede">Each formula stands on its own — and each one has a place in the three-minute ritual.</p>
+      </div>
+      <a class="btn btn-outline" href="shop.html">View all products</a>
+    </div>
+    <div class="product-grid">
+      <article class="product-card" data-reveal="up">
+        <div class="product-media"><img src="images/media-generation-aurelle-hero-serum-0-4fcf1c53-7531-4a49-99a8-deaffc6c5359.jpg" alt="Amber glass bottle of Lumière Renewal Serum on a stone surface" loading="lazy"><span class="product-tag">Best seller</span></div>
+        <div class="product-body">
+          <h3 class="product-name"><a href="shop.html#serum">Lumière Renewal Serum</a></h3>
+          <p class="product-meta">30 ml · Face serum</p>
+          <p class="product-keys">Rosehip · Squalane · Niacinamide</p>
+          <div class="product-foot"><span class="product-price">$148</span><button class="btn btn-small" data-add-to-bag="serum">Add to bag</button></div>
+        </div>
+      </article>
+      <article class="product-card" data-reveal="up">
+        <div class="product-media"><img src="images/media-generation-aurelle-cream-jar-0-c90256d9-1f0b-487e-a089-5493aa65174f.jpg" alt="Glass jar of Crème Velours with a cream lid" loading="lazy"><span class="product-tag">New</span></div>
+        <div class="product-body">
+          <h3 class="product-name"><a href="shop.html#cream">Crème Velours</a></h3>
+          <p class="product-meta">50 ml · Face cream</p>
+          <p class="product-keys">Shea butter · Squalane · Hyaluronic acid</p>
+          <div class="product-foot"><span class="product-price">$128</span><button class="btn btn-small" data-add-to-bag="cream">Add to bag</button></div>
+        </div>
+      </article>
+      <article class="product-card" data-reveal="up">
+        <div class="product-media"><img src="images/media-generation-aurelle-cleansing-oil-0-750a71ce-3fb7-4a8a-93a7-de9e7b2a9779.jpg" alt="Bottle of Huile Nettoyante cleansing oil beside green leaves" loading="lazy"></div>
+        <div class="product-body">
+          <h3 class="product-name"><a href="shop.html#oil">Huile Nettoyante Cleansing Oil</a></h3>
+          <p class="product-meta">150 ml · Cleansing oil</p>
+          <p class="product-keys">Squalane · Green tea</p>
+          <div class="product-foot"><span class="product-price">$86</span><button class="btn btn-small" data-add-to-bag="oil">Add to bag</button></div>
+        </div>
+      </article>
+      <article class="product-card" data-reveal="up">
+        <div class="product-media"><img src="images/media-generation-aurelle-cream-texture-0-ec41ca31-18d6-4d5b-9123-76716369dccd.jpg" alt="Whipped cream texture of Éclat Eye Concentrate in soft light" loading="lazy"><span class="product-tag">Treatment</span></div>
+        <div class="product-body">
+          <h3 class="product-name"><a href="shop.html#eye">Éclat Eye Concentrate</a></h3>
+          <p class="product-meta">15 ml · Eye treatment</p>
+          <p class="product-keys">Niacinamide · Hyaluronic acid · Green tea</p>
+          <div class="product-foot"><span class="product-price">$98</span><button class="btn btn-small" data-add-to-bag="eye">Add to bag</button></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ INGREDIENTS PREVIEW ============ -->
+<section class="section ingredients-preview">
+  <div class="container ingredients-grid">
+    <div class="ingredients-media" data-reveal="left">
+      <img src="images/media-generation-aurelle-botanicals-0-cca9d0f1-4751-45e1-984b-c4ad97f2713d.jpg" alt="Botanical ingredients laid out flat: rosehips, green tea leaves, shea nuts and dried flowers" data-parallax loading="lazy">
+    </div>
+    <div data-reveal="up">
+      <p class="eyebrow"><span class="num">03</span> Ingredients</p>
+      <h2 class="section-title">Six ingredients. <em>No secrets.</em></h2>
+      <div class="ing-story">
+        <h3><span>01 · The brightener</span>Rosehip oil</h3>
+        <p>Cold-pressed from rosehip seeds. Rich in linoleic acid and provitamin A, it supports an even-looking tone and a smoother feel.</p>
+      </div>
+      <div class="ing-story">
+        <h3><span>02 · The mimic</span>Squalane</h3>
+        <p>A lightweight emollient that mirrors the skin's own lipids. It locks in moisture without heaviness or shine.</p>
+      </div>
+      <div class="ing-story">
+        <h3><span>03 · The steady hand</span>Niacinamide</h3>
+        <p>Vitamin B3. It supports the skin barrier, helps tone look more even, and calms the look of redness.</p>
+      </div>
+      <a class="btn btn-outline" href="ingredients.html">Explore the library</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ RITUAL TEASER ============ -->
+<section class="section">
+  <div class="container ritual-teaser-grid">
+    <div data-reveal="up">
+      <p class="eyebrow"><span class="num">04</span> The ritual</p>
+      <h2 class="section-title">Three minutes, <em>twice a day.</em></h2>
+      <p class="section-lede">No ten-step routines. No gadgets. Three steps, in the same order, every morning and every night.</p>
+      <ol class="ritual-steps-mini">
+        <li><span class="r-num">01</span><span><strong>Cleanse</strong>Huile Nettoyante — 60 seconds, on dry skin.</span></li>
+        <li><span class="r-num">02</span><span><strong>Treat</strong>Lumière Serum, pressed into damp skin — plus Éclat around the eyes.</span></li>
+        <li><span class="r-num">03</span><span><strong>Seal</strong>Crème Velours, warmed between the palms and pressed over face and neck.</span></li>
+      </ol>
+      <a class="btn btn-terra" href="ritual.html">Read the ritual</a>
+    </div>
+    <div class="ritual-teaser-media" data-reveal="right">
+      <img src="images/media-generation-aurelle-ritual-hands-0-bb69b49b-4b8a-47a8-a685-a8f74203dc7a.jpg" alt="Hands pressing serum into skin during the morning ritual" data-parallax loading="lazy">
+    </div>
+  </div>
+</section>
+
+<!-- ============ JOURNAL ============ -->
+<section class="section" id="journal">
+  <div class="container">
+    <p class="eyebrow" data-reveal="up"><span class="num">05</span> Journal</p>
+    <h2 class="section-title" data-reveal="up">Read before you <em>buy more.</em></h2>
+    <p class="section-lede" data-reveal="up" style="margin-bottom: 40px;">Short guides, written in plain language. Click a card to read it — no account, no pop-ups.</p>
+    <div class="journal-grid">
+      <details class="journal-card" data-reveal="up">
+        <summary>
+          <span class="j-kicker">Guide</span>
+          <h3>How to layer a serum so it actually absorbs</h3>
+          <span class="j-link">Read the guide</span>
+        </summary>
+        <p>Serum works best on damp skin. After cleansing, leave your face slightly wet — water on the surface helps humectants like hyaluronic acid pull moisture in instead of sitting on top.</p>
+        <p>Press, don't rub. Rubbing pushes product onto your hands; pressing puts it on your face. Give each layer a minute before the next one, and use less than you think — three to four drops covers a whole face.</p>
+      </details>
+      <details class="journal-card" data-reveal="up">
+        <summary>
+          <span class="j-kicker">Ingredients</span>
+          <h3>What niacinamide does, in plain language</h3>
+          <span class="j-link">Read the guide</span>
+        </summary>
+        <p>Niacinamide is vitamin B3. It supports the skin barrier — the wall that keeps water in and irritants out — and it helps tone look more even over weeks, not overnight.</p>
+        <p>It plays well with almost everything, including vitamin C and retinol, and most skin types tolerate it daily. If a product lists it near the top of the ingredients, that is a good sign it is there to work, not to decorate the label.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ============ NEWSLETTER ============ -->
+<section class="section">
+  <div class="container">
+    <div class="newsletter" data-reveal="up">
+      <div class="newsletter-grid">
+        <div>
+          <h2>The AURELLE letter, <em>once a month.</em></h2>
+          <p>One email a month: what we are making, what the garden is doing, and what we have learned about skin. No discounts, no noise.</p>
+        </div>
+        <div>
+          <form class="newsletter-form" novalidate>
+            <label class="visually-hidden" for="newsletterEmail">Email address</label>
+            <input type="email" id="newsletterEmail" name="email" placeholder="Your email address" required autocomplete="email">
+            <button class="btn" type="submit">Subscribe</button>
+          </form>
+          <p class="newsletter-thanks">Thank you — you are on the list.</p>
+          <p class="newsletter-note">Demo form — nothing is sent or stored. Unsubscribe anytime.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer"><div class="container footer-grid">
+<div class="footer-brand"><p class="wordmark">AURELLE<span class="wordmark-dot">.</span></p><p>Skin, distilled to its essence. Small-batch botanical skincare, made with ingredients you can read.</p></div>
+<nav aria-label="Footer shop"><p class="footer-title">Shop</p><a href="shop.html">All products</a><a href="shop.html#serum">Lumière Renewal Serum</a><a href="shop.html#cream">Crème Velours</a><a href="shop.html#oil">Huile Nettoyante Cleansing Oil</a><a href="shop.html#eye">Éclat Eye Concentrate</a></nav>
+<nav aria-label="Footer learn"><p class="footer-title">Learn</p><a href="ingredients.html">Ingredients</a><a href="ritual.html">Ritual</a><a href="index.html#journal">Journal</a></nav>
+<div class="footer-note"><p class="footer-title">A note</p><p>Demo concept — not a real store. Built by Chenar as a design test.</p></div>
+</div><div class="container footer-bottom"><p>© AURELLE — a fictional brand created for design testing.</p><p>Demo concept — not a real store. Built by Chenar as a design test.</p></div></footer>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.15.1/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.15.1/dist/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.3.27/dist/lenis.min.js"></script>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/hero-3d.js"></script>
+<script>
+/* Hero entrance: one orchestrated moment (masked split-text reveal).
+   Words are pre-wrapped in HTML, so the headline is complete without JS. */
+(function () {
+  var reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (reduced || typeof window.gsap === "undefined") return;
+  var tl = gsap.timeline({ defaults: { ease: "power3.out" } });
+  tl.from(".hero-title .word", { yPercent: 115, duration: 0.8, stagger: 0.08 }, 0.1)
+    .from(".hero-kicker, .hero-copy, .hero-ctas, .hero-meta", { y: 24, opacity: 0, duration: 0.7, stagger: 0.09 }, 0.45)
+    .from(".hero-frame, .hero-caption", { y: 32, opacity: 0, duration: 0.8 }, 0.5);
+})();
+</script>
+</body>
+</html>
