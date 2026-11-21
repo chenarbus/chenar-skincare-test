@@ -10,6 +10,14 @@
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
 <link rel="stylesheet" href="assets/css/main.css">
+<script type="importmap">
+{
+  "imports": {
+    "three": "https://cdn.jsdelivr.net/npm/three@0.187.0/build/three.module.js",
+    "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.187.0/examples/jsm/"
+  }
+}
+</script>
 </head>
 <body>
 <header class="site-header" id="siteHeader"><div class="container header-inner">
@@ -59,19 +67,19 @@
 </div>
 <div class="container">
 <section class="product-detail" id="serum">
-<div class="detail-media"><img src="images/media-generation-aurelle-hero-serum-0-4fcf1c53-7531-4a49-99a8-deaffc6c5359.jpg" alt="Amber glass bottle of Lumière Renewal Serum on a stone surface"></div>
+<div class="detail-media product-viewer" data-product="serum"><div class="viewer-fallback"><img src="images/media-generation-aurelle-hero-serum-0-4fcf1c53-7531-4a49-99a8-deaffc6c5359.jpg" alt="Amber glass bottle of Lumière Renewal Serum on a stone surface"></div></div>
 <div class="detail-body"><h2>Lumière Renewal Serum</h2><p class="detail-price">$148 · 30 ml</p><p>A lightweight daily serum built around cold-pressed rosehip oil. It sinks in fast and leaves skin looking even and rested.</p><p>The oil base absorbs quickly, so it layers under cream without pilling. Every ingredient is named on the label, and there is no added fragrance.</p><ul class="detail-list"><li><strong>Size</strong><span>30 ml</span></li><li><strong>Key ingredients</strong><span>Rosehip · Squalane · Niacinamide</span></li><li><strong>How to use</strong><span>Press 3–4 drops onto damp skin, morning and evening, after cleansing.</span></li><li><strong>Skin goals</strong><span>Uneven tone · Dullness · Early lines</span></li></ul><div class="detail-actions"><button class="btn btn-terra" data-add-to-bag="serum">Add to bag — $148</button><a class="btn btn-outline" href="ritual.html">Read the ritual</a></div></div>
 </section>
 <section class="product-detail" id="cream">
-<div class="detail-media"><img src="images/media-generation-aurelle-cream-jar-0-c90256d9-1f0b-487e-a089-5493aa65174f.jpg" alt="Glass jar of Crème Velours with a cream lid"></div>
+<div class="detail-media product-viewer" data-product="cream"><div class="viewer-fallback"><img src="images/media-generation-aurelle-cream-jar-0-c90256d9-1f0b-487e-a089-5493aa65174f.jpg" alt="Glass jar of Crème Velours with a cream lid"></div></div>
 <div class="detail-body"><h2>Crème Velours</h2><p class="detail-price">$128 · 50 ml</p><p>A whipped, cushiony cream that seals in moisture without sitting heavy. Shea butter does the softening; squalane and hyaluronic acid hold the water in.</p><p>The whipped texture spreads easily and absorbs without leaving a heavy residue. Every ingredient is named on the label, and there is no added fragrance.</p><ul class="detail-list"><li><strong>Size</strong><span>50 ml</span></li><li><strong>Key ingredients</strong><span>Shea butter · Squalane · Hyaluronic acid</span></li><li><strong>How to use</strong><span>Warm a pea-sized amount between your palms and press over face and neck, morning and evening.</span></li><li><strong>Skin goals</strong><span>Dryness · Tightness · Comfort</span></li></ul><div class="detail-actions"><button class="btn btn-terra" data-add-to-bag="cream">Add to bag — $128</button><a class="btn btn-outline" href="ritual.html">Read the ritual</a></div></div>
 </section>
 <section class="product-detail" id="eye">
-<div class="detail-media"><img src="images/media-generation-aurelle-cream-texture-0-ec41ca31-18d6-4d5b-9123-76716369dccd.jpg" alt="Whipped cream texture of Éclat Eye Concentrate in soft light"></div>
+<div class="detail-media product-viewer" data-product="eye"><div class="viewer-fallback"><img src="images/media-generation-aurelle-cream-texture-0-ec41ca31-18d6-4d5b-9123-76716369dccd.jpg" alt="Whipped cream texture of Éclat Eye Concentrate in soft light"></div></div>
 <div class="detail-body"><h2>Éclat Eye Concentrate</h2><p class="detail-price">$98 · 15 ml</p><p>A light concentrate for the eye area, with niacinamide and hyaluronic acid. It hydrates and softens the look of fine lines without fragrance or sting.</p><p>The lightweight texture absorbs quickly and layers under cream without pilling. Every ingredient is named on the label, and there is no added fragrance.</p><ul class="detail-list"><li><strong>Size</strong><span>15 ml</span></li><li><strong>Key ingredients</strong><span>Niacinamide · Hyaluronic acid · Green tea</span></li><li><strong>How to use</strong><span>Tap one pump around the orbital bone, morning and evening. A little goes a long way.</span></li><li><strong>Skin goals</strong><span>Dark circles · Fine lines · Puffiness</span></li></ul><div class="detail-actions"><button class="btn btn-terra" data-add-to-bag="eye">Add to bag — $98</button><a class="btn btn-outline" href="ritual.html">Read the ritual</a></div></div>
 </section>
 <section class="product-detail" id="oil">
-<div class="detail-media"><img src="images/media-generation-aurelle-cleansing-oil-0-750a71ce-3fb7-4a8a-93a7-de9e7b2a9779.jpg" alt="Bottle of Huile Nettoyante cleansing oil beside green leaves"></div>
+<div class="detail-media product-viewer" data-product="oil"><div class="viewer-fallback"><img src="images/media-generation-aurelle-cleansing-oil-0-750a71ce-3fb7-4a8a-93a7-de9e7b2a9779.jpg" alt="Bottle of Huile Nettoyante cleansing oil beside green leaves"></div></div>
 <div class="detail-body"><h2>Huile Nettoyante Cleansing Oil</h2><p class="detail-price">$86 · 150 ml</p><p>A gentle cleansing oil that dissolves sunscreen, makeup and the day without stripping the skin. It rinses clean and leaves no film.</p><p>The oil turns milky on contact with water and rinses away with warm water. Every ingredient is named on the label, and there is no added fragrance.</p><ul class="detail-list"><li><strong>Size</strong><span>150 ml</span></li><li><strong>Key ingredients</strong><span>Squalane · Green tea</span></li><li><strong>How to use</strong><span>Massage onto dry skin for 60 seconds, add a little water to turn it milky, then rinse.</span></li><li><strong>Skin goals</strong><span>Daily cleansing · Sensitive skin · Makeup removal</span></li></ul><div class="detail-actions"><button class="btn btn-terra" data-add-to-bag="oil">Add to bag — $86</button><a class="btn btn-outline" href="ritual.html">Read the ritual</a></div></div>
 </section>
 </div>
@@ -86,6 +94,7 @@
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.15.1/dist/ScrollTrigger.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/lenis@1.3.27/dist/lenis.min.js"></script>
 <script src="assets/js/main.js"></script>
+<script src="assets/js/product-3d.js"></script>
 <script>
 const grid = document.getElementById('productGrid');
 const count = document.getElementById('shopCount');
@@ -113,6 +122,14 @@ sortSelect.addEventListener('change', () => {
   cards.sort((a, b) => value === 'price-asc' ? a.dataset.price - b.dataset.price : value === 'price-desc' ? b.dataset.price - a.dataset.price : a.dataset.featured - b.dataset.featured);
   cards.forEach(card => grid.appendChild(card));
 });
+/* Interactive 3D viewers in the product detail sections (lazy: they
+   initialise only as they approach the viewport; the photo inside
+   each container stays as the fallback if 3D is unavailable). */
+if (window.Aurelle3D && typeof window.Aurelle3D.initViewer === 'function') {
+  document.querySelectorAll('.product-viewer[data-product]').forEach(function (el) {
+    window.Aurelle3D.initViewer(el, el.getAttribute('data-product'), { lazy: true });
+  });
+}
 </script>
 </body>
 </html>
