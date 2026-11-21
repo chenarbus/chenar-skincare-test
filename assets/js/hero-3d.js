@@ -15,7 +15,8 @@
   var stage = document.getElementById("dropStage");
   if (!stage) return;
 
-  function hideStage() {
+  function hideStage(reason) {
+    if (reason) console.warn("AURELLE 3D: hero stage hidden — " + reason);
     stage.setAttribute("data-webgl", "off");
   }
 
@@ -23,11 +24,11 @@
   try {
     var testCanvas = document.createElement("canvas");
     var gl = testCanvas.getContext("webgl2") || testCanvas.getContext("webgl");
-    if (!gl) { hideStage(); return; }
-  } catch (e) { hideStage(); return; }
+    if (!gl) { hideStage("WebGL unavailable"); return; }
+  } catch (e) { hideStage("WebGL check threw: " + e.message); return; }
 
   if (!window.Aurelle3D || typeof window.Aurelle3D.initViewer !== "function") {
-    hideStage();
+    hideStage("Aurelle3D module not loaded");
     return;
   }
 
@@ -49,5 +50,5 @@
     }
   });
 
-  if (!viewer) hideStage();
+  if (!viewer) hideStage("initViewer returned nothing");
 })();

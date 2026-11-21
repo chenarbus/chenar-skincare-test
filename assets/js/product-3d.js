@@ -179,14 +179,14 @@
     return new THREE.LatheGeometry(v, segments || 64);
   }
 
-  function mesh(geo, mat, x, y, z) {
+  function mesh(THREE, geo, mat, x, y, z) {
     var m = new THREE.Mesh(geo, mat);
     if (x !== undefined) m.position.set(x || 0, y || 0, z || 0);
     return m;
   }
 
   function labelBand(THREE, mats, radius, height, y) {
-    var band = mesh(
+    var band = mesh(THREE, 
       new THREE.CylinderGeometry(radius, radius, height, 96, 1, true),
       mats.label
     );
@@ -200,75 +200,75 @@
   var BUILDERS = {
     serum: function (THREE, M) {
       var g = new THREE.Group();
-      g.add(mesh(lathe(THREE, [
+      g.add(mesh(THREE, lathe(THREE, [
         [0.001, 0], [0.28, 0], [0.38, 0.02], [0.42, 0.08], [0.43, 0.16],
         [0.43, 1.10], [0.42, 1.22], [0.38, 1.33], [0.30, 1.42], [0.20, 1.48],
         [0.16, 1.52], [0.155, 1.58], [0.155, 1.70], [0.13, 1.70], [0.13, 1.74]
       ]), M.amberGlass));
       /* amber liquid, filled to just over half so the pipette shows above it */
-      g.add(mesh(lathe(THREE, [
+      g.add(mesh(THREE, lathe(THREE, [
         [0.001, 0.01], [0.30, 0.01], [0.39, 0.05], [0.40, 0.12], [0.40, 0.66],
         [0.36, 0.70], [0.001, 0.70]
       ]), M.amberLiquid));
       /* dropper stem, visible through the glass above the liquid line */
-      g.add(mesh(new THREE.CylinderGeometry(0.032, 0.032, 1.38, 16), M.ink, 0, 1.03, 0));
+      g.add(mesh(THREE, new THREE.CylinderGeometry(0.032, 0.032, 1.38, 16), M.ink, 0, 1.03, 0));
       /* thin terracotta ring at the cap base */
-      g.add(mesh(new THREE.CylinderGeometry(0.19, 0.19, 0.045, 48), M.terra, 0, 1.70, 0));
+      g.add(mesh(THREE, new THREE.CylinderGeometry(0.19, 0.19, 0.045, 48), M.terra, 0, 1.70, 0));
       /* dark cap */
-      g.add(mesh(new THREE.CylinderGeometry(0.185, 0.185, 0.44, 48), M.ink, 0, 1.92, 0));
-      g.add(mesh(new THREE.CylinderGeometry(0.185, 0.16, 0.05, 48), M.ink, 0, 2.15, 0));
+      g.add(mesh(THREE, new THREE.CylinderGeometry(0.185, 0.185, 0.44, 48), M.ink, 0, 1.92, 0));
+      g.add(mesh(THREE, new THREE.CylinderGeometry(0.185, 0.16, 0.05, 48), M.ink, 0, 2.15, 0));
       g.add(labelBand(THREE, M, 0.438, 0.55, 0.62));
       return { model: g, height: 2.18 };
     },
 
     cream: function (THREE, M) {
       var g = new THREE.Group();
-      g.add(mesh(lathe(THREE, [
+      g.add(mesh(THREE, lathe(THREE, [
         [0.001, 0], [0.40, 0], [0.52, 0.03], [0.57, 0.10], [0.58, 0.20],
         [0.58, 0.52], [0.56, 0.60], [0.50, 0.64], [0.48, 0.64]
       ]), M.frostedGlass));
       /* warm cream core seen through the frosted glass */
-      g.add(mesh(new THREE.CylinderGeometry(0.50, 0.50, 0.46, 48), M.creamFill, 0, 0.30, 0));
+      g.add(mesh(THREE, new THREE.CylinderGeometry(0.50, 0.50, 0.46, 48), M.creamFill, 0, 0.30, 0));
       /* thin terracotta ring where lid meets jar */
-      g.add(mesh(new THREE.CylinderGeometry(0.605, 0.605, 0.035, 64), M.terra, 0, 0.655, 0));
+      g.add(mesh(THREE, new THREE.CylinderGeometry(0.605, 0.605, 0.035, 64), M.terra, 0, 0.655, 0));
       /* cream lid */
-      g.add(mesh(new THREE.CylinderGeometry(0.60, 0.60, 0.20, 64), M.lidCream, 0, 0.74, 0));
-      g.add(mesh(new THREE.CylinderGeometry(0.58, 0.60, 0.03, 64), M.lidCream, 0, 0.85, 0));
+      g.add(mesh(THREE, new THREE.CylinderGeometry(0.60, 0.60, 0.20, 64), M.lidCream, 0, 0.74, 0));
+      g.add(mesh(THREE, new THREE.CylinderGeometry(0.58, 0.60, 0.03, 64), M.lidCream, 0, 0.85, 0));
       g.add(labelBand(THREE, M, 0.588, 0.36, 0.34));
       return { model: g, height: 0.87 };
     },
 
     oil: function (THREE, M) {
       var g = new THREE.Group();
-      g.add(mesh(lathe(THREE, [
+      g.add(mesh(THREE, lathe(THREE, [
         [0.001, 0], [0.22, 0], [0.30, 0.03], [0.32, 0.10], [0.32, 1.55],
         [0.31, 1.68], [0.26, 1.80], [0.17, 1.88], [0.13, 1.92], [0.125, 1.98], [0.125, 2.06]
       ]), M.amberGlass));
-      g.add(mesh(lathe(THREE, [
+      g.add(mesh(THREE, lathe(THREE, [
         [0.001, 0.01], [0.23, 0.01], [0.29, 0.05], [0.30, 0.12], [0.30, 0.96],
         [0.27, 1.00], [0.001, 1.00]
       ]), M.amberLiquid));
       /* pump: collar, stem, nozzle, spout */
-      g.add(mesh(new THREE.CylinderGeometry(0.15, 0.15, 0.14, 32), M.ink, 0, 2.10, 0));
-      g.add(mesh(new THREE.CylinderGeometry(0.085, 0.085, 0.22, 32), M.ink, 0, 2.26, 0));
-      g.add(mesh(new THREE.BoxGeometry(0.36, 0.10, 0.13), M.ink, 0.13, 2.36, 0));
-      g.add(mesh(new THREE.CylinderGeometry(0.035, 0.035, 0.12, 16), M.ink, 0.29, 2.28, 0));
+      g.add(mesh(THREE, new THREE.CylinderGeometry(0.15, 0.15, 0.14, 32), M.ink, 0, 2.10, 0));
+      g.add(mesh(THREE, new THREE.CylinderGeometry(0.085, 0.085, 0.22, 32), M.ink, 0, 2.26, 0));
+      g.add(mesh(THREE, new THREE.BoxGeometry(0.36, 0.10, 0.13), M.ink, 0.13, 2.36, 0));
+      g.add(mesh(THREE, new THREE.CylinderGeometry(0.035, 0.035, 0.12, 16), M.ink, 0.29, 2.28, 0));
       g.add(labelBand(THREE, M, 0.328, 0.75, 0.95));
       return { model: g, height: 2.41 };
     },
 
     eye: function (THREE, M) {
       var g = new THREE.Group();
-      g.add(mesh(lathe(THREE, [
+      g.add(mesh(THREE, lathe(THREE, [
         [0.001, 0], [0.18, 0], [0.235, 0.02], [0.25, 0.07], [0.25, 0.72],
         [0.24, 0.80], [0.20, 0.87], [0.13, 0.92], [0.11, 0.95], [0.11, 1.06]
       ]), M.amberGlass));
-      g.add(mesh(lathe(THREE, [
+      g.add(mesh(THREE, lathe(THREE, [
         [0.001, 0.01], [0.19, 0.01], [0.225, 0.05], [0.23, 0.10], [0.23, 0.48],
         [0.20, 0.51], [0.001, 0.51]
       ]), M.amberLiquid));
-      g.add(mesh(new THREE.CylinderGeometry(0.135, 0.135, 0.035, 32), M.terra, 0, 1.06, 0));
-      g.add(mesh(new THREE.CylinderGeometry(0.125, 0.125, 0.34, 32), M.ink, 0, 1.24, 0));
+      g.add(mesh(THREE, new THREE.CylinderGeometry(0.135, 0.135, 0.035, 32), M.terra, 0, 1.06, 0));
+      g.add(mesh(THREE, new THREE.CylinderGeometry(0.125, 0.125, 0.34, 32), M.ink, 0, 1.24, 0));
       g.add(labelBand(THREE, M, 0.258, 0.42, 0.42));
       return { model: g, height: 1.41 };
     }
@@ -517,7 +517,9 @@
           var pmrem = new THREE.PMREMGenerator(renderer);
           scene.environment = pmrem.fromScene(new RoomEnvironment(), 0.04).texture;
           pmrem.dispose();
-        } catch (envErr) { /* lights alone still carry the look */ }
+        } catch (envErr) { /* lights alone still carry the look */
+          console.warn("AURELLE 3D: environment map failed:", envErr && envErr.message);
+        }
 
         var maxAniso = renderer.capabilities.getMaxAnisotropy();
         var labelTex = makeLabelTexture(THREE, productKey, maxAniso);
@@ -605,6 +607,8 @@
           ensureLoop();
         }
       } catch (err) {
+        console.error("AURELLE 3D: viewer init failed for " + productKey + ":",
+          err && err.message, err && err.stack);
         dispose();
         markOff();
       }
@@ -618,7 +622,8 @@
         import("three/addons/environments/RoomEnvironment.js")
       ]).then(function (mods) {
         doInit(mods[0], mods[1].RoomEnvironment);
-      }).catch(function () {
+      }).catch(function (err) {
+        console.error("AURELLE 3D: failed to load Three.js:", err && err.message);
         markOff();
       });
     }

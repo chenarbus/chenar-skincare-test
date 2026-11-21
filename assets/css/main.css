@@ -83,6 +83,12 @@ input, select { font-family: inherit; font-size: 16px; }
 .js .hero-title .word { transform: translateY(115%); }
 .js .hero-kicker, .js .hero-copy, .js .hero-ctas, .js .hero-meta { opacity: 0; transform: translateY(24px); }
 .js .hero-frame, .js .hero-caption { opacity: 0; transform: translateY(32px); }
+/* Hero safety net (see head script): if the entrance ever stalls, the
+   hero is forced into its final state. !important beats any inline
+   transform GSAP left behind. */
+.hero-settled .hero-title .word, .hero-settled .hero-kicker, .hero-settled .hero-copy,
+.hero-settled .hero-ctas, .hero-settled .hero-meta, .hero-settled .hero-frame,
+.hero-settled .hero-caption { transform: none !important; opacity: 1 !important; }
 
 .eyebrow {
   display: flex;

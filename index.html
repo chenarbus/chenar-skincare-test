@@ -10,7 +10,21 @@
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
 <link rel="stylesheet" href="assets/css/main.css">
-<script>document.documentElement.classList.add("js");setTimeout(function(){if(typeof window.gsap==="undefined")document.documentElement.classList.remove("js");},3000);</script>
+<script>document.documentElement.classList.add("js");setTimeout(function(){if(typeof window.gsap==="undefined")document.documentElement.classList.remove("js");},3000);
+/* Hero safety net: if the entrance has not completed ~2.8s after first
+   paint (GSAP stalled, timeline interrupted, a transform left behind),
+   force the hero into its final state. It only fires while .js is still
+   present, so a normally-completed entrance is untouched. The
+   .hero-settled CSS rule wins over any inline transform GSAP left. */
+setTimeout(function(){
+  var el=document.documentElement;
+  if(!el.classList.contains("js"))return;
+  el.classList.add("hero-settled");
+  el.classList.remove("js");
+  var sel=".hero-title .word, .hero-kicker, .hero-copy, .hero-ctas, .hero-meta, .hero-frame, .hero-caption";
+  if(window.gsap){gsap.set(sel,{clearProps:"transform,opacity"});}
+  else{var n=document.querySelectorAll(sel);for(var i=0;i<n.length;i++){n[i].style.transform="";n[i].style.opacity="";}}
+},2800);</script>
 <script type="importmap">
 {
   "imports": {
@@ -269,6 +283,13 @@
     document.documentElement.classList.remove("js");
     return;
   }
+  /* Claim the words' transform with GSAP before animating: the CSS
+     initial state is translateY(115%), which GSAP parses from the
+     computed matrix as a PIXEL y-offset (~117px) with yPercent 0 — so
+     animating yPercent alone leaves the words translated down and
+     clipped by their line masks forever. Setting yPercent here makes
+     GSAP own the offset, and the tween below then reveals them. */
+  gsap.set(".hero-title .word", { y: 0, yPercent: 115 });
   var tl = gsap.timeline({ defaults: { ease: "power3.out" }, onComplete: function () {
     document.documentElement.classList.remove("js");
   } });
